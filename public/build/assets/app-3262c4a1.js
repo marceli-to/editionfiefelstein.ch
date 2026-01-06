@@ -1,0 +1,1 @@
+(function(){function t(){var n="ontouchstart"in window||navigator.maxTouchPoints>0||navigator.msMaxTouchPoints>0;n&&document.documentElement.classList.add("is-touch")}document.readyState==="loading"?document.addEventListener("DOMContentLoaded",t):t()})();

@@ -1,0 +1,24 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-3b4dc46e.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/icons/chevron-down-tiny.svg": {
+    "file": "assets/chevron-down-tiny-07bd5436.svg",
+    "src": "resources/icons/chevron-down-tiny.svg"
+  },
+  "resources/icons/radio-checked.svg": {
+    "file": "assets/radio-checked-755ab6e3.svg",
+    "src": "resources/icons/radio-checked.svg"
+  },
+  "resources/icons/radio-unchecked.svg": {
+    "file": "assets/radio-unchecked-dc084a9a.svg",
+    "src": "resources/icons/radio-unchecked.svg"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-3262c4a1.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
