@@ -1,9 +1,10 @@
-<a 
+<a
   href="javascript:;"
-  x-on:click="menu = ! menu"
-  class="block mt-60 lg:mt-80 w-25 h-25 lg:fixed lg:left-[calc((100vw/12)_+_14px)]">
+  x-on:click="menu = !menu; cart = false"
+  x-show="!cart"
+  class="w-32 h-24 flex items-center justify-center relative z-70">
   <span x-show="menu === false">
-    <x-icons.burger class="w-full h-20" />
+    <x-icons.burger class="w-full h-full" />
   </span>
   <span x-cloak x-show="menu === true">
     <x-icons.cross size="lg" />

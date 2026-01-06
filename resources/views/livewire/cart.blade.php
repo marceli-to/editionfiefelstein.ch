@@ -1,23 +1,18 @@
-<div 
-  x-data="{ showCart: false, toggleCart() { this.showCart = !this.showCart; } }"
-  @toggle-cart.window="toggleCart"
-  @display-updated-cart.window="showCart = true"
-  @hide-updated-cart.window="showCart = false"
-  class="relative">
+<div>
   @if (isset($cart['items']))
-  <div 
-    x-cloak 
-    x-show="showCart" 
-    x-on:click.outside="showCart = false"
-    x-on:keyup.escape.window="showCart = false"
-    class="fixed z-80 sm:z-60 h-full w-full max-w-[calc(100%_-_16px)] xs:max-w-[320px] bg-white top-0 right-0 px-16 border-l border-l-black">
+  <div
+    x-cloak
+    x-show="cart"
+    x-on:click.outside="cart = false"
+    x-on:keyup.escape.window="cart = false"
+    class="fixed z-80 sm:z-60 h-full w-full max-w-[calc(100%_-_32px)] lg:max-w-[calc((100%_-_208px)/6_+_48px)] top-0 right-0 px-16 bg-lime">
     <div class="relative">
-      <a 
+      <a
         href="javascript:;"
-        x-on:click="showCart = false">
-        <x-icons.cross size="sm" class="absolute top-20 left-0 w-16 h-auto" />
+        x-on:click="cart = false">
+        <x-icons.cross size="lg" class="absolute top-20 right-0 lg:right-auto lg:left-4 lg:top-75 w-24 h-auto" />
       </a>
-      <div class="pt-140 xs:pt-85 lg:pt-100">
+      <div class="pt-140 xs:pt-85 lg:pt-140">
         <h2 
           class="font-europa-bold font-bold mt-4"
           wire:loading.class="hidden" 
@@ -76,7 +71,7 @@
             <span>{{ number_format($cart['total'], 2, '.', '') }}</span>
           </x-table.row>
           <x-table.row class="border-none">
-            <x-buttons.primary route="{{ route('order.overview') }}" label="Erwerben" class="font-europa-bold font-bold " />
+            <x-buttons.primary route="{{ route('order.overview') }}" label="Erwerben" class="font-europa-bold font-bold" />
           </x-table.row>
         </div>
       </div>

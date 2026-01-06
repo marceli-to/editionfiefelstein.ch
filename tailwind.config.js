@@ -26,9 +26,10 @@ export default {
         '64': '4rem',
       },
 
-      maxWidth: {
+      maxWidth: ({ theme }) => ({
+        ...theme('spacing'),
         'screen': '1600px',
-      },
+      }),
 
       colors: {
         'flame': '#FF5000',

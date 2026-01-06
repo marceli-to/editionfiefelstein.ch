@@ -2,6 +2,6 @@
 <a 
   href="{{ $url }}" 
   title="{{ $title }}" 
-  class="{{ $class }} hover:text-flame transition-colors {{ $current ? 'text-flame' : '' }}">
+  class="{{ $class }} hover:text-lime transition-colors {{ $current ? 'text-lime' : '' }}">
   {{ $title }}
 </a>
