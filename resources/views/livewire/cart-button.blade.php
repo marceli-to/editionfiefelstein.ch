@@ -19,7 +19,7 @@
   <button 
     wire:click="addToCart(quantity)" 
     wire:loading.class="pointer-events-none !bg-flame !border-flame !text-white"
-    class="min-h-32 mt-32 font-bold leading-none w-full bg-white border border-black hover:border-flame hover:bg-flame hover:text-white transition-all">
+    class="min-h-32 mt-32 font-bold leading-none w-full bg-white border border-black hover:border-lime hover:bg-lime transition-all">
     <span wire:loading.class="hidden">Erwerben</span>
     <span wire:loading class="hidden">Wird erworben...</span>
   </button>

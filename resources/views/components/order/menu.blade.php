@@ -39,7 +39,7 @@ $routes = [
           @if ($order_step >= $route['order_step'] || request()->routeIs('order.' . $key))
             <a 
               href="{{ route('order.' . $key) }}"
-              class="w-full min-h-32 font-europa-bold font-bold flex items-center leading-none space-x-6 hover:text-flame group-hover:text-flame transition-all {{ request()->routeIs('order.' . $key) ? '!text-flame' : '' }}"
+              class="w-full min-h-32 font-europa-bold font-bold flex items-center leading-none space-x-6 {{ request()->routeIs('order.' . $key) ? '' : '' }}"
               title="{{ $route['label'] }}">
               {{ $route['label']  }}
             </a>

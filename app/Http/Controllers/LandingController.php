@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers;
+use App\Models\Product;
 
 class LandingController extends Controller
 {
@@ -10,6 +11,7 @@ class LandingController extends Controller
    */
   public function index()
   {
-    return view('pages.landing');
+    $product = Product::first();
+    return view('pages.landing', compact('product'));
   }
 }

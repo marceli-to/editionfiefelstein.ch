@@ -12,7 +12,7 @@
         x-on:click="cart = false">
         <x-icons.cross size="lg" class="absolute top-20 right-0 lg:right-auto lg:left-4 lg:top-75 w-24 h-auto" />
       </a>
-      <div class="pt-140 xs:pt-85 lg:pt-140">
+      <div class="pt-140 xs:pt-85 lg:pt-120">
         <h2 
           class="font-europa-bold font-bold mt-4"
           wire:loading.class="hidden" 
@@ -36,7 +36,7 @@
                 <span>{{ $item['quantity'] }}</span>
               </x-table.row>
               <x-table.row class="flex justify-between">
-                <span>{{ $item['description'] }}</span>
+                <span>ISBN {{ $item['isbn'] }}</span>
                 <span>{{ $item['price'] }}</span>
               </x-table.row>
               <x-table.row class="border-b border-b-black flex justify-center items-center">
@@ -60,7 +60,7 @@
                   <span>{{ $item['quantity'] }}</span>
                 </x-table.row>
                 <x-table.row class="border-b border-b-black flex justify-between group-hover:border-flame">
-                  <span>{{ $item['description'] }}</span>
+                  <span>ISBN {{ $item['isbn'] }}</span>
                   <span>{{ $item['price'] }}</span>
                 </x-table.row>
               </a>

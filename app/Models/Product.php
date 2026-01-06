@@ -5,7 +5,6 @@ use Spatie\Sluggable\SlugOptions;
 use App\Enums\ProductState;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Product extends Model
 {
@@ -21,10 +20,10 @@ class Product extends Model
     'attributes',
     'rows',
     'image',
+    'image_caption',
     'publish',
     'state',
     'sort',
-    'user_id',
   ];
 
   protected $casts = [
@@ -61,11 +60,6 @@ class Product extends Model
       'publish' => $this->publish,
     ];
   }
-  public function user(): BelongsTo
-  {
-    return $this->belongsTo(User::class);
-  }
-
   public function scopePublished($query)
   {
     return $query->where('publish', true);

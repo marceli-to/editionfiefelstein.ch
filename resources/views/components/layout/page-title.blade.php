@@ -1,5 +1,5 @@
-<div class="mb-20 lg:mb-0 lg:mt-90">
-  <h1 class="text-lg -mt-10 lg:mt-0">
+<div class="mb-20 lg:mb-40 lg:mt-64">
+  <h1 class="text-lg">
     {{ $slot }}
   </h1>
 </div>

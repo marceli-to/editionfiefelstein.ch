@@ -1,5 +1,5 @@
 <main class="grid grid-cols-12 lg:gap-x-16 px-16">
-  
+
   <div class="col-span-6 lg:col-span-2 order-1 sticky top-0 z-70 bg-white lg:bg-transparent max-h-screen">
     <x-icons.logo class="max-w-160 lg:max-w-220 mt-20" />
   </div>

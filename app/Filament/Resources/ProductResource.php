@@ -101,6 +101,7 @@ class ProductResource extends Resource
           ->schema([
 
           FileUpload::make('image')
+            ->disk('public')
             ->image()
             ->imageEditor()
             ->required()
@@ -111,6 +112,10 @@ class ProductResource extends Resource
               $name = $fileName . '-' . uniqid() . '.' . $file->extension();
               return (string) str($name);
             }),
+
+          TextInput::make('image_caption')
+            ->label('Bildunterschrift')
+            ->maxLength(255),
 
             Repeater::make('rows')
               ->label('Zeilen')
@@ -140,6 +145,7 @@ class ProductResource extends Resource
 
                 // Images for landscape positions (used in multiple layouts)
                 FileUpload::make('landscape_1')
+                  ->disk('public')
                   ->label('Querformat 1')
                   ->image()
                   ->imageEditor()
@@ -149,6 +155,7 @@ class ProductResource extends Resource
                   }),
 
                 FileUpload::make('landscape_2')
+                  ->disk('public')
                   ->label('Querformat 2')
                   ->image()
                   ->imageEditor()
@@ -157,8 +164,8 @@ class ProductResource extends Resource
                     return pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME) . '-' . uniqid() . '.' . $file->extension();
                   }),
 
-                // Portrait image (for portrait layouts)
                 FileUpload::make('portrait')
+                  ->disk('public')
                   ->label('Hochformat')
                   ->image()
                   ->imageEditor()
@@ -187,6 +194,7 @@ class ProductResource extends Resource
       ->columns([
         
         ImageColumn::make('image')
+          ->disk('public')
           ->label('Bild')
           ->circular()
           ->height(50),

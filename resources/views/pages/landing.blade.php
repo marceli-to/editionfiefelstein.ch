@@ -1,114 +1,24 @@
 @extends('app')
 @section('content')
-<section>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident odit repellat quis sint tempora nulla quas eveniet. Eum ipsam cum incidunt facere sit ipsum sapiente repellendus maiores similique minima!</p>
+<section class="lg:grid lg:grid-cols-8 lg:gap-x-16">
+  <div class="lg:col-span-4">
+    <x-table.row class="font-europa-bold font-bold py-4 !min-h-33">
+      {{ $product->title }}
+    </x-table.row>
+    @foreach($product->attributes as $attribute)
+      <x-table.row class="py-4 !min-h-33">
+        {{ $attribute }}
+      </x-table.row>
+    @endforeach
+    <x-table.row class="py-4 !min-h-33">
+      CHF {{ $product->price }}
+    </x-table.row>
+    
+    @if ($product->stock > 0 && $product->state->value() == 'deliverable')
+      <livewire:cart-button :productUuid="$product->uuid" :key="$product->uuid" />
+    @endif
 
+
+  </div>
 </section>
 @endsection

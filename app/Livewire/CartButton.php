@@ -94,7 +94,7 @@ class CartButton extends Component
     $this->cart['items'][] = [
       'uuid' => $product->uuid,
       'title' => $product->title,
-      'description' => $product->description,
+      'isbn' => $product->isbn,
       'state' => $product->state->value,
       'price' => $product->price,
       'shipping' => $product->state->value == 'deliverable' ? $product->shipping : NULL,
