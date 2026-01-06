@@ -9,11 +9,11 @@
     Lieferadresse
   </x-layout.page-title>
 @endif
-<div class="md:grid md:grid-cols-12 gap-x-16 lg:mt-30 pb-20 lg:pb-40">
-  <div class="hidden md:block md:col-span-4 lg:col-span-2 lg:col-start-2">
+<div class="md:grid md:grid-cols-8 gap-x-16">
+  <div class="hidden md:block md:col-span-2">
     <x-order.menu order_step="{{ $order_step }}" />
   </div>
-  <div class="md:col-span-8 lg:col-span-5 xl:col-span-4">
+  <div class="md:col-span-6 lg:col-span-4">
     <form method="POST" action="{{ route('order.shipping-address-store') }}">
       @csrf
       <div class="space-y-1">
@@ -89,9 +89,9 @@
       </x-table.row>
     </form>
   </div>
-  <div class="hidden lg:block lg:col-span-2 xl:col-span-2">
+  <div class="hidden lg:block lg:col-span-2">
     @foreach($cart['items'] as $item)
-      <x-media.image :src="$item['image']" :alt="$item['title']" class="hidden md:block md:mb-16 xl:max-w-[240px]" />
+      <x-media.image :src="$item['image']" :alt="$item['title']" class="hidden md:block md:mb-16" />
     @endforeach
   </div>
 </div>

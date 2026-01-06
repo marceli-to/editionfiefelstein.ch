@@ -9,11 +9,11 @@
     Zusammenfassung
   </x-layout.page-title>
 @endif
-<div class="md:grid md:grid-cols-12 gap-x-16 lg:mt-30 pb-20 lg:pb-40">
-  <div class="hidden md:block md:col-span-4 lg:col-span-2 lg:col-start-2">
+<div class="md:grid md:grid-cols-8 gap-x-16">
+  <div class="hidden md:block md:col-span-2">
     <x-order.menu order_step="{{ $order_step }}" />
   </div>
-  <div class="md:col-span-8 lg:col-span-5 xl:col-span-4">
+  <div class="md:col-span-6">
     <form method="POST" action="{{ route('order.finalize') }}">
       @csrf
       <x-table.row class="font-europa-bold font-bold">
@@ -107,7 +107,6 @@
         <span>Zahlungsmittel</span>
       </x-table.row>
       <x-table.row>
-        {{-- <span>{{ $cart['payment_method']['name'] }}</span> --}}
         <span>Kreditkarte</span>
       </x-table.row>
       <x-table.row class="mt-32">

@@ -4,10 +4,10 @@
   Warenkorb
 </x-layout.page-title>
 <div class="md:grid md:grid-cols-8 gap-x-16">
-  <div class="hidden md:block md:col-span-4 lg:col-span-2">
+  <div class="hidden md:block md:col-span-2">
     <x-order.menu order_step="{{ $order_step }}" />
   </div>
-  <div class="md:col-span-8 lg:col-span-4">
+  <div class="md:col-span-6 lg:col-span-4">
     @empty ($cart['items'])
       <p class="text-lg font-europa-light font-light -mt-4">Ihr Warenkorb ist leer.</p>
     @else

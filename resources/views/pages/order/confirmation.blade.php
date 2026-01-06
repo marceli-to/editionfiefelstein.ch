@@ -3,11 +3,11 @@
 <x-layout.page-title>
   Herzlichen Dank für Ihre Bestellung
 </x-layout.page-title>
-<div class="md:grid md:grid-cols-12 gap-x-16 lg:mt-30 pb-20 lg:pb-40">
-  <div class="hidden md:block md:col-span-4 lg:col-span-2 lg:col-start-2">
+<div class="md:grid md:grid-cols-8 gap-x-16">
+  <div class="hidden md:block md:col-span-4 lg:col-span-2">
     <x-order.menu order_step="{{ $order_step }}" />
   </div>
-  <div class="md:col-span-8 lg:col-span-5 xl:col-span-4">
+  <div class="md:col-span-8 lg:col-span-4">
     @foreach ($order->orderProducts as $product)
       <div class="mb-32 last-of-type:mb-0 divide-y divide-black border-t border-t-black">
         <div class="grid grid-cols-4">
