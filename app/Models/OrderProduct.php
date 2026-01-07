@@ -10,7 +10,7 @@ class OrderProduct extends Model
       'order_id',
       'product_id',
       'title',
-      'description',
+      'isbn',
       'image',
       'quantity',
       'price',

@@ -7,7 +7,8 @@ class ContactPage extends Model
   protected $table = 'contact_page';
 
   protected $fillable = [
-    'imprint', 
+    'imprint',
+    'copyright',
     'toc_title',
     'toc_items',
     'privacy'

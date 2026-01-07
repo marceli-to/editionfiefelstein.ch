@@ -42,9 +42,8 @@ class OrderResource extends Resource
 
   public static function form(Schema $form): Schema
   {
-    return $form
+    return $form->columns(2)
       ->schema([
-        Grid::make()->schema([
           Section::make('Bestellung')
             ->schema([
               TextInput::make('order_number')
@@ -66,10 +65,7 @@ class OrderResource extends Resource
                 ->displayFormat('d.m.Y')
                 ->disabled()
                 ->columnSpan('full'),
-            ])->columnSpan([
-              'default' => 12,
-              'lg' => 6,
-          ]),
+            ])->columnSpan(1),
           Section::make('Adresse')
           ->schema([
             TextInput::make('salutation')
@@ -142,12 +138,7 @@ class OrderResource extends Resource
                   ->disabled()
                   ->columnSpan('full'),             
               ]),
-          ])->columnSpan([
-            'default' => 12,
-            'lg' => 6,
-          ]),
-          
-        ])->columns(12),
+          ])->columnSpan(1),
       ]);
   }
 

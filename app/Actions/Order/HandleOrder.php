@@ -63,7 +63,7 @@ class HandleOrder
         'order_id' => $order->id,
         'product_id' => $product->id,
         'title' => $product->title,
-        'description' => $product->description,
+        'isbn' => $product->isbn,
         'image' => $product->image,
         'quantity' => $item['quantity'],
         'price' => $price,

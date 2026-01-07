@@ -9,7 +9,7 @@
             <td class="quantity">{{ $product->quantity }}</td>
           </tr>
           <tr>
-            <td>{{ $product->description }}</td>
+            <td>ISBN {{ $product->isbn }}</td>
             <td class="currency">CHF</td>
             <td class="amount text-right">{{ $product->price }}</td>
           </tr>

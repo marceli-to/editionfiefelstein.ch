@@ -33,7 +33,7 @@
         </tr>
         <tr>
           <td class="order-detail-item">
-            {{ $product->description }}
+            ISBN {{ $product->isbn }}
           </td>
           <td class="order-detail-item order-detail-item--currency">
             CHF

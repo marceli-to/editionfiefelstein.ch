@@ -4,6 +4,6 @@
   @toggle-cart.window="cart = !cart; menu = false"
   @display-updated-cart.window="cart = true; menu = false"
   @hide-updated-cart.window="cart = false">
-  <x-debug />
+  {{-- <x-debug /> --}}
   {{ $slot }}
 </body>

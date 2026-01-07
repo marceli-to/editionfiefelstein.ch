@@ -4,7 +4,7 @@
     <x-icons.logo class="max-w-160 lg:max-w-220 mt-20" />
   </div>
 
-  <div class="col-span-12 lg:col-span-8 order-3 lg:order-2">
+  <div class="col-span-12 lg:col-span-8 order-3 lg:order-2 pb-32">
     {{ $slot }}
   </div>
 

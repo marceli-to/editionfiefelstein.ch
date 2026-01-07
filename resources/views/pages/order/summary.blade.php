@@ -31,7 +31,7 @@
           </div>
           <div class="grid grid-cols-4">
             <x-table.row class="border-none col-span-3">
-              <span>{{ $item['description'] }}</span>
+              <span>ISBN {{ $item['isbn'] }}</span>
             </x-table.row>
             <x-table.row class="border-none col-span-1 flex justify-between 2xl:pl-16">
               <span>CHF</span>

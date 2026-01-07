@@ -6,6 +6,7 @@ use Filament\Forms;
 use Filament\Schemas\Schema;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Fieldset;
+use Filament\Schemas\Components\Group;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
@@ -78,7 +79,23 @@ class ContactPageResource extends Resource
                 ])
             ])
             ->columnSpan(1),
-          Section::make('AGB')
+          Group::make([
+            Section::make('Copyright')
+              ->schema([
+                RichEditor::make('copyright')
+                  ->label('Copyright')
+                  ->toolbarButtons([
+                    'bold',
+                    'orderedList',
+                    'bulletList',
+                    'h2',
+                    'h3',
+                    'link',
+                    'redo',
+                    'undo',
+                  ]),
+              ]),
+            Section::make('AGB')
             ->schema([
               Textarea::make('toc_title')
                 ->label('Titel')
@@ -105,8 +122,8 @@ class ContactPageResource extends Resource
                     'link',
                   ]),
                 ]),
-            ])
-            ->columnSpan(1),
+            ]),
+          ])->columnSpan(1),
       ]);
   }
 

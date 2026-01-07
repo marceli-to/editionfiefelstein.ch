@@ -56,7 +56,7 @@ class Order extends Model
   {
     return $this->belongsToMany(Product::class, 'order_product')->withPivot(
       'title',
-      'description',
+      'isbn',
       'price',
       'quantity'
     );
@@ -108,6 +108,6 @@ class Order extends Model
    */
   public function getOrderNumberAttribute()
   {
-    return 'FS-' . str_pad($this->id, 6, '0', STR_PAD_LEFT);
+    return 'EFS-' . str_pad($this->id, 6, '0', STR_PAD_LEFT);
   }
 }

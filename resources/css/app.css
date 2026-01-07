@@ -34,8 +34,7 @@ article.product-card p:last-of-type {
 }
 
 /* Pages */
-.contact-page h2,
-.idea-page h2 {
+.contact-page h2 {
   @apply font-europa-bold font-bold mb-0 leading-[1.2]
 }
 
@@ -51,12 +50,12 @@ article.product-card p:last-of-type {
   @apply mt-32
 }
 
-.contact-page .contact-page__imprint strong {
-  @apply font-europa-regular font-normal
+.contact-page .contact-page__imprint p {
+  @apply leading-[1.35] mb-24
 }
 
-.contact-page .contact-page__imprint p {
-  @apply leading-[1.35]
+.contact-page .contact-page__imprint p:last-of-type {
+  @apply mb-0
 }
 
 .contact-page .contact-page__imprint a span {
@@ -99,15 +98,11 @@ article.product-card p:last-of-type {
 }
 
 .contact-page .contact-page__toc__privacy {
-  @apply mt-64
+  @apply mt-32
 }
 
 .contact-page .contact-page__toc .contact-page__toc__privacy p {
   @apply !indent-0
-}
-
-.idea-page .idea-page__text p:not(:last-of-type) {
-  @apply mb-16
 }
 
 .cart-item-touch {

@@ -22,6 +22,7 @@ Route::get('/img/{path}', [ImageController::class, 'show'])->where('path', '.*')
 Route::get('/', [LandingController::class, 'index'])->name('home');
 Route::get('/produkt/{product}', [ProductController::class, 'show'])->name('product.show');
 Route::get('/kontakt', [PageController::class, 'contact'])->name('contact');
+Route::get('/edition', [PageController::class, 'about'])->name('about');
 
 Route::get('/bestellung/uebersicht', [OrderController::class, 'index'])->name('order.overview');
 Route::middleware(['ensure.cart.not.empty'])->group(function () {
