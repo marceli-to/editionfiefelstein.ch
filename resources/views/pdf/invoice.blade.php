@@ -2,7 +2,7 @@
 @include('pdf.partials.css.portrait')
 @include('pdf.partials.css.invoice')
 <header class="page-header">
-  <img src="{{ asset('/img/logo.png') }}" height="100" width="100">
+  <img src="{{ public_path('/img/logo.png') }}" height="100" width="100">
   <h1>Rechnung</h1>
 </header>
 <footer class="page-footer">

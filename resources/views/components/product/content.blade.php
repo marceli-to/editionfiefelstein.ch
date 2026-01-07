@@ -13,7 +13,9 @@
     <x-table.row class="py-4 !min-h-33">
       CHF {{ $product->price }}
     </x-table.row>
-
+      <x-table.row class="border-b border-b-black py-4 !min-h-33 italic">
+       50 Stück im exklusiven Vorverkauf
+      </x-table.row>
     @if ($product->stock > 0 && $product->state->value() == 'deliverable')
       <livewire:cart-button :productUuid="$product->uuid" :key="$product->uuid" />
     @endif
