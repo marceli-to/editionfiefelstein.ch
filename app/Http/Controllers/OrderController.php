@@ -9,6 +9,7 @@ use App\Actions\Cart\StoreCart;
 use App\Actions\Cart\UpdateCart;
 use App\Actions\Order\HandleOrder;
 use App\Models\Order;
+use App\Models\Product;
 
 class OrderController extends Controller
 {
@@ -102,13 +103,20 @@ class OrderController extends Controller
 
     foreach ($cart['items'] as $item)
     {
-      // set unit_amount
-      $unit_amount = (int) ($item['price'] * 100);
+      // Fetch current price from database - never trust session prices
+      $product = Product::where('uuid', $item['uuid'])->first();
 
-      // add shipping if it's not 0
-      if (isset($item['shipping']) && $item['shipping'] > 0)
-      {
-        $unit_amount += (int) ($item['shipping'] * 100);
+      if (!$product) {
+        // Product no longer exists - skip this item
+        continue;
+      }
+
+      // Use database price, not session price
+      $unit_amount = (int) ($product->price * 100);
+
+      // Add shipping only for deliverable products with shipping cost
+      if ($product->state->value === 'deliverable' && $product->shipping > 0) {
+        $unit_amount += (int) ($product->shipping * 100);
       }
 
       $items[] = [
@@ -116,8 +124,8 @@ class OrderController extends Controller
           'currency' => 'chf',
           'unit_amount' => $unit_amount,
           'product_data' => [
-            'name' => $item['title'],
-            'images' => [env('APP_URL') . "/img/small/" . $item['image']],
+            'name' => $product->title,
+            'images' => [env('APP_URL') . "/img/small/" . $product->image],
           ],
         ],
         'quantity' => $item['quantity'],
