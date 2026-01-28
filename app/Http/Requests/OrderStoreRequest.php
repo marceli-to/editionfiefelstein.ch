@@ -12,7 +12,8 @@ class OrderStoreRequest extends FormRequest
 
   public function authorize()
   {
-    return true;
+    $cart = session()->get('cart', []);
+    return !empty($cart['items']);
   }
 
   /**

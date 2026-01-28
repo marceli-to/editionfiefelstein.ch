@@ -1,7 +1,7 @@
 <main class="grid grid-cols-12 lg:gap-x-16 px-16">
 
   <div class="col-span-6 lg:col-span-2 order-1 sticky top-0 z-70 bg-white lg:bg-transparent max-h-screen">
-    <x-icons.logo class="max-w-160 lg:max-w-220 mt-20" />
+    <x-icons.logo class="max-w-180 lg:max-w-220 mt-20 mb-20 md:mb-0" />
   </div>
 
   <div class="col-span-12 lg:col-span-8 order-3 lg:order-2 pb-32">
@@ -17,7 +17,7 @@
       </div>
 
       @if (!Route::is('order.*'))
-        <div class="mt-20 order-1 lg:order-2 lg:col-span-1 lg:mt-75 relative lg:flex lg:justify-end lg:z-80">
+        <div class="mt-20 order-1 lg:order-2 lg:col-span-1 lg:mt-72 relative lg:flex lg:justify-end lg:z-80">
           <livewire:cart-icon />
         </div>
       @endif

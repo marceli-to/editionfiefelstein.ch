@@ -29,22 +29,13 @@
               <span>{{ $item['quantity'] }}</span>
             </x-table.row>
           </div>
-          <div class="grid grid-cols-4">
+          <div class="grid grid-cols-4 !border-b border-b-black">
             <x-table.row class="border-none col-span-3">
               <span>ISBN {{ $item['isbn'] }}</span>
             </x-table.row>
             <x-table.row class="border-none col-span-1 flex justify-between 2xl:pl-16">
               <span>CHF</span>
               <span>{!! number_format($item['price'] * $item['quantity'], 2, '.', '&thinsp;') !!}</span>
-            </x-table.row>
-          </div>
-          <div class="grid grid-cols-4 !border-b border-b-black">
-            <x-table.row class="border-none col-span-3">
-              <span>Verpackung und Versand</span>
-            </x-table.row>
-            <x-table.row class="border-none col-span-1 flex justify-between 2xl:pl-16">
-              <span>CHF</span>
-              <span>{{ number_format($item['shipping'] * $item['quantity'], 2, '.', '&thinsp;') }}</span>
             </x-table.row>
           </div>
         </div>
@@ -109,14 +100,14 @@
       <x-table.row>
         <span>Kreditkarte</span>
       </x-table.row>
-      <x-table.row class="mt-32">
+      <x-table.row class="mt-32 pt-4">
         <x-form.checkbox 
           name="accept_terms" 
           value="true" 
           label="Hiermit akzeptiere ich die <a href='/kontakt' title='Allgemeinen Geschäftsbedingungen' target='_blank' class='hover:text-flame'><strong>Allgemeinen Geschäftsbedingungen</strong></a> und die <a href='/kontakt' title='Datenschutzerklärung' target='_blank' class='hover:text-flame'><strong>Datenschutzerklärung</strong></a>." 
           checked="{{ $cart['accept_terms'] ?? old('accept_terms') }}"
           class="!items-start pt-4"
-          iconClass="mt-5" />
+          iconClass="mt-6" />
       </x-table.row>
       <x-table.row class="border-none mt-32">
         <button 

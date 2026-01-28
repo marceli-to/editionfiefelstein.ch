@@ -9,7 +9,7 @@
       <x-media.image :src="$row['landscape_2']" alt="" class="w-full h-full object-cover" />
     </div>
   </div>
-  <div class="bg-lime text-sm lg:text-md [&_p]:mb-16 last:[&_p]:mb-0 p-16 md:col-span-4 md:overflow-y-auto">
+  <div class="bg-lime text-sm 2xl:text-md [&_p]:mb-16 last:[&_p]:mb-0 p-16 md:col-span-4 md:overflow-y-auto tracking-normal">
     {!! $row['text'] ?? '' !!}
   </div>
 </div>

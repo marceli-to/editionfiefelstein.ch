@@ -84,9 +84,6 @@
         </tr>
       </table>
     </div>
-    <div class="pt-lg">
-      <p style="line-height: 1.54">Kleinere Produkte versenden wir innerhalb der Schweiz und des Fürstentums Lichtenstein, die entsprechende Versandpauschale wird Ihnen im Warenkorb angezeigt. Grössere Produkte können auf Voranmeldung bei uns an der Binzstrasse abgeholt werden oder werden auf Anfrage persönlich oder per Kurier überbracht. Bitte kontaktieren Sie uns hierfür per E-Mail: <a href="mailto:anliegen@editionfiefelstein.ch" style="text-decoration: none; color: #000000">anliegen@editionfiefelstein.ch</a></p>
-    </div>
     <div class="pt-xl">
       <a href="https://www.instagram.com/fiefelstein/" target="_blank" title="editionfiefelstein.ch auf Instagram">
         <img src="{{ config('app.url') }}/img/instagram.png" alt="editionfiefelstein.ch auf Instagram" height="20" width="20" style="display:block; height:auto; width: 20px;">

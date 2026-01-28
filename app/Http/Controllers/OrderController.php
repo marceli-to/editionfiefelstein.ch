@@ -7,6 +7,7 @@ use App\Http\Requests\OrderStoreRequest;
 use App\Actions\Cart\GetCart;
 use App\Actions\Cart\StoreCart;
 use App\Actions\Cart\UpdateCart;
+use App\Actions\Cart\CalculateShipping;
 use App\Actions\Order\HandleOrder;
 use App\Models\Order;
 use App\Models\Product;
@@ -101,6 +102,8 @@ class OrderController extends Controller
     $cart = (new GetCart())->execute();
     $items = [];
 
+    $totalDeliverableQuantity = 0;
+
     foreach ($cart['items'] as $item)
     {
       // Fetch current price from database - never trust session prices
@@ -114,9 +117,9 @@ class OrderController extends Controller
       // Use database price, not session price
       $unit_amount = (int) ($product->price * 100);
 
-      // Add shipping only for deliverable products with shipping cost
-      if ($product->state->value === 'deliverable' && $product->shipping > 0) {
-        $unit_amount += (int) ($product->shipping * 100);
+      // Count deliverable items for shipping calculation
+      if ($product->state->value === 'deliverable') {
+        $totalDeliverableQuantity += $item['quantity'];
       }
 
       $items[] = [
@@ -129,6 +132,21 @@ class OrderController extends Controller
           ],
         ],
         'quantity' => $item['quantity'],
+      ];
+    }
+
+    // Add shipping as separate line item if there are deliverable items
+    if ($totalDeliverableQuantity > 0) {
+      $shippingCost = (new CalculateShipping())->execute($totalDeliverableQuantity);
+      $items[] = [
+        'price_data' => [
+          'currency' => 'chf',
+          'unit_amount' => (int) ($shippingCost * 100),
+          'product_data' => [
+            'name' => 'Versand',
+          ],
+        ],
+        'quantity' => 1,
       ];
     }
 

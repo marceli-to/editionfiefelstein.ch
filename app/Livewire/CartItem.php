@@ -6,6 +6,7 @@ use App\Actions\Product\FindProduct;
 use App\Actions\Cart\GetCart;
 use App\Actions\Cart\StoreCart;
 use App\Actions\Cart\DestroyCart;
+use App\Actions\Cart\CalculateShipping;
 
 class CartItem extends Component
 {
@@ -13,8 +14,6 @@ class CartItem extends Component
   public $item;
   public $quantity;
   public $itemTotal;
-  public $itemGrandTotal;
-  public $itemTotalShipping;
   public $product;
   public $cart;
 
@@ -67,9 +66,9 @@ class CartItem extends Component
       return $item;
     })->toArray();
 
-    // update the cart total
+    // update the cart total (price only, shipping calculated separately)
     $this->cart['total'] = collect($this->cart['items'])->sum(function ($item) {
-      return $item['price'] * $item['quantity'] + $item['shipping'] * $item['quantity'];
+      return $item['price'] * $item['quantity'];
     });
 
     // store the cart
@@ -89,7 +88,7 @@ class CartItem extends Component
     ->all();
     $this->cart['quantity']--;
     $this->cart['total'] = collect($this->cart['items'])->sum(function ($item) {
-      return $item['price'] * $item['quantity'] + $item['shipping'] * $item['quantity'];
+      return $item['price'] * $item['quantity'];
     });
     (new StoreCart())->execute($this->cart);
 
@@ -104,8 +103,6 @@ class CartItem extends Component
   private function setTotal()
   {
     $this->itemTotal = $this->item['price'] * $this->quantity;
-    $this->itemTotalShipping = $this->item['shipping'] * $this->quantity;
-    $this->itemGrandTotal = $this->itemTotal + $this->itemTotalShipping;
   }
 
   public function render()

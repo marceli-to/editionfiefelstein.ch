@@ -5,7 +5,7 @@
     x-show="cart"
     x-on:click.outside="cart = false"
     x-on:keyup.escape.window="cart = false"
-    class="fixed z-80 sm:z-60 h-full w-full max-w-[calc(100%_-_32px)] lg:max-w-[calc((100%_-_208px)/6_+_48px)] top-0 right-0 px-16 bg-lime">
+    class="fixed z-80 sm:z-60 h-full w-full max-w-[calc(100%_-_16px)] md:max-w-[calc(50%_-_8px)] 2xl:max-w-[calc((100%_-_208px)/6_+_48px)] top-0 right-0 px-16 bg-lime">
     <div class="relative">
       <a
         href="javascript:;"
@@ -54,7 +54,7 @@
                 wire:click="removeCartItem('{{ $item['uuid'] }}')" 
                 class="block hover:text-flame group relative" 
                 title="Produkt entfernen">
-                <x-icons.cross size="sm" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 -mt-1 h-auto opacity-0 group-hover:opacity-100 bg-white" />
+                <x-icons.cross size="sm" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 -mt-1 h-auto opacity-0 group-hover:opacity-100 bg-lime" />
                 <x-table.row class="font-europa-bold font-bold flex justify-between group-hover:border-flame">
                   <span>{{ $item['title'] }}</span>
                   <span>{{ $item['quantity'] }}</span>
