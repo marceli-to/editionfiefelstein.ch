@@ -29,6 +29,7 @@ class Order extends Model
     'shipping_city',
     'shipping_country',
     'total',
+    'shipping_cost',
     'payment_method',
     'stripe_session_id',
     'payed_at',

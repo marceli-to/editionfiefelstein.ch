@@ -8,8 +8,8 @@
     <x-order.menu order_step="{{ $order_step }}" />
   </div>
   <div class="md:col-span-8 lg:col-span-4">
-    @foreach ($order->orderProducts as $product)
-      <div class="mb-32 last-of-type:mb-0 divide-y divide-black border-t border-t-black">
+    <div class="divide-y divide-black border-t border-t-black">
+      @foreach ($order->orderProducts as $product)
         <div class="grid grid-cols-4">
           <x-table.row class="border-none col-span-3 flex justify-between font-europa-bold font-bold">
             <span>{{ $product->title }}</span>
@@ -24,32 +24,23 @@
           </x-table.row>
           <x-table.row class="border-none col-span-1 flex justify-between 2xl:pl-16">
             <span>CHF</span>
-            <span>{{ $product->price }}</span>
+            <span>{!! number_format($product->price, 2, '.', '&thinsp;') !!}</span>
           </x-table.row>
         </div>
-        <div class="grid grid-cols-4">
-          <x-table.row class="border-none col-span-3">
-            <span>Verpackung und Versand</span>
-          </x-table.row>
-          <x-table.row class="border-none col-span-1 flex justify-between 2xl:pl-16">
-            <span>CHF</span>
-            <span>{{ $product->shipping }}</span>
-          </x-table.row>
-        </div>
-        <div class="grid grid-cols-4 !border-b border-b-black font-europa-bold font-bold">
-          <x-table.row class="border-none col-span-3">
-            <span>Total</span>
-          </x-table.row>
-          <x-table.row class="border-none col-span-1 flex justify-between 2xl:pl-16">
-            <span>CHF</span>
-            <span>{!! number_format($product->price + $product->shipping, 2, '.', '&thinsp;') !!}</span>
-          </x-table.row>
-        </div>
+      @endforeach
+      <div class="grid grid-cols-4">
+        <x-table.row class="border-none col-span-3">
+          <span>Verpackung und Versand</span>
+        </x-table.row>
+        <x-table.row class="border-none col-span-1 flex justify-between 2xl:pl-16">
+          <span>CHF</span>
+          <span>{!! number_format($order->shipping_cost, 2, '.', '&thinsp;') !!}</span>
+        </x-table.row>
       </div>
-    @endforeach
+    </div>
     <div class="grid grid-cols-4 border-y border-y-black font-europa-bold font-bold">
       <x-table.row class="border-none col-span-3">
-        <span>Gesamttotal</span>
+        <span>Total</span>
       </x-table.row>
       <x-table.row class="border-none col-span-1 flex justify-between 2xl:pl-16">
         <span>CHF</span>

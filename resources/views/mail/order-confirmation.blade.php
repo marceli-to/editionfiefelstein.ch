@@ -11,26 +11,22 @@
           <tr>
             <td>ISBN {{ $product->isbn }}</td>
             <td class="currency">CHF</td>
-            <td class="amount text-right">{{ $product->price }}</td>
-          </tr>
-          <tr>
-            <td>Verpackung und Versand</td>
-            <td class="currency">CHF</td>
-            <td class="amount text-right">
-              {!! number_format($product->shipping, 2, '.', '&thinsp;') !!}
-            </td>
-          </tr>
-          <tr>
-            <td>Total</td>
-            <td class="currency">CHF</td>
-            <td class="amount text-right">
-              {!! number_format($product->price + $product->shipping, 2, '.', '&thinsp;') !!}
-            </td>
-          </tr>
-          <tr>
-            <td colspan="3">&nbsp;</td>
+            <td class="amount text-right">{!! number_format($product->price, 2, '.', '&thinsp;') !!}</td>
           </tr>
         @endforeach
+        <tr>
+          <td>Verpackung und Versand</td>
+          <td class="currency">CHF</td>
+          <td class="amount text-right">{!! number_format($data->shipping_cost, 2, '.', '&thinsp;') !!}</td>
+        </tr>
+        <tr>
+          <td><strong>Total</strong></td>
+          <td class="currency"><strong>CHF</strong></td>
+          <td class="amount text-right"><strong>{!! number_format($data->total, 2, '.', '&thinsp;') !!}</strong></td>
+        </tr>
+        <tr>
+          <td colspan="3">&nbsp;</td>
+        </tr>
         <tr>
           <td colspan="3">Lieferadresse</td>
         </tr>

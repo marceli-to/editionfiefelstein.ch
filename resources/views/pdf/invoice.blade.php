@@ -19,8 +19,8 @@
       <div class="font-bold">Rechnung {{ $data->order_number }}</div>
       <div>Zürich, {{ \Carbon\Carbon::now()->locale('de_CH')->isoFormat('D. MMMM YYYY') }}</div>
     </div>
-    @foreach($data->orderProducts as $product)
-      <table class="order-details">
+    <table class="order-details">
+      @foreach($data->orderProducts as $product)
         <tr>
           <td class="order-detail-item font-bold">
             {{ $product->title }}
@@ -42,40 +42,27 @@
             {!! number_format($product->price, 2, '.', '') !!}
           </td>
         </tr>
-        <tr>
-          <td class="order-detail-item">
-            Verpackung und Versand
-          </td>
-          <td class="order-detail-item order-detail-item--currency">
-            CHF
-          </td>
-          <td class="order-detail-item order-detail-item--price align-right">
-            {!! number_format($product->shipping, 2, '.', '') !!}
-          </td>
-        </tr>
-        <tr>
-          <td class="order-detail-item font-bold">
-            Total
-          </td>
-          <td class="order-detail-item order-detail-item--currency font-bold">
-            CHF
-          </td>
-          <td class="order-detail-item order-detail-item--price align-right font-bold">
-            {!! number_format($product->price + $product->shipping, 2, '.', '') !!}
-          </td>
-        </tr>
-      </table>
-    @endforeach
-    <table class="order-details">
+      @endforeach
+      <tr>
+        <td class="order-detail-item">
+          Verpackung und Versand
+        </td>
+        <td class="order-detail-item order-detail-item--currency">
+          CHF
+        </td>
+        <td class="order-detail-item order-detail-item--price align-right">
+          {!! number_format($data->shipping_cost, 2, '.', '') !!}
+        </td>
+      </tr>
       <tr>
         <td class="order-detail-item font-bold">
-          Gesamttotal
+          Total
         </td>
         <td class="order-detail-item order-detail-item--currency font-bold">
           CHF
         </td>
         <td class="order-detail-item order-detail-item--price align-right font-bold">
-          {{ $data->total }}
+          {!! number_format($data->total, 2, '.', '') !!}
         </td>
       </tr>
     </table>

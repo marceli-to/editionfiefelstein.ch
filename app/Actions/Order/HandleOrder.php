@@ -107,13 +107,15 @@ class HandleOrder
     }
 
     // Add shipping cost if there are deliverable items
+    $shippingCost = 0;
     if ($totalDeliverableQuantity > 0) {
       $shippingCost = (new CalculateShipping())->execute($totalDeliverableQuantity);
       $total += $shippingCost;
     }
 
-    // Update order total with the calculated total
+    // Update order total and shipping cost
     $order->total = $total;
+    $order->shipping_cost = $shippingCost;
     $order->save();
 
     // Return order with products and order products
