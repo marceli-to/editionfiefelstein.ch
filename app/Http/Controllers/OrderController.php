@@ -8,6 +8,7 @@ use App\Actions\Cart\GetCart;
 use App\Actions\Cart\StoreCart;
 use App\Actions\Cart\UpdateCart;
 use App\Actions\Cart\CalculateShipping;
+use App\Actions\Cart\DestroyCart;
 use App\Actions\Order\HandleOrder;
 use App\Models\Order;
 use App\Models\Product;
@@ -15,7 +16,7 @@ use App\Models\Product;
 class OrderController extends Controller
 {
   public function index()
-  {  
+  {
     return view('pages.order.overview', [
       'cart' => (new GetCart())->execute(),
       'order_step' => $this->handleStep(1),
@@ -45,7 +46,7 @@ class OrderController extends Controller
   {
     $cart = (new GetCart())->execute();
     $can_use_invoice_address = in_array(
-      $cart['invoice_address']['country'], 
+      $cart['invoice_address']['country'],
       config('countries.delivery')
     ) ?? FALSE;
 
@@ -59,8 +60,8 @@ class OrderController extends Controller
   public function storeShipping(ShippingAddressStoreRequest $request)
   {
     $cart = (new UpdateCart())->execute([
-      'shipping_address' => !$request->use_invoice_address ? 
-        $request->only(['use_invoice_address', 'company', 'firstname', 'name', 'street', 'street_number', 'zip', 'city', 'country']) : 
+      'shipping_address' => !$request->use_invoice_address ?
+        $request->only(['use_invoice_address', 'company', 'firstname', 'name', 'street', 'street_number', 'zip', 'city', 'country']) :
         $request->only(['use_invoice_address']),
       'order_step' => $this->handleStep(3),
     ]);
@@ -94,50 +95,36 @@ class OrderController extends Controller
 
   public function finalize(OrderStoreRequest $request)
   {
-    // Implement payment process
-    \Stripe\Stripe::setApiKey(env('PAYMENT_STRIPE_PRIVATE_KEY'));
-    $domain = config('app.url');
+    \Stripe\Stripe::setApiKey(config('services.stripe.secret'));
 
-    // Get cart and build items array
+    // Create pending order BEFORE redirecting to Stripe
+    $order = (new HandleOrder())->createPending();
+
+    // Get cart for email
     $cart = (new GetCart())->execute();
+
+    // Build line items from the order (which used database prices)
     $items = [];
-
-    $totalDeliverableQuantity = 0;
-
-    foreach ($cart['items'] as $item)
+    foreach ($order->orderProducts as $orderProduct)
     {
-      // Fetch current price from database - never trust session prices
-      $product = Product::where('uuid', $item['uuid'])->first();
-
-      if (!$product) {
-        // Product no longer exists - skip this item
-        continue;
-      }
-
-      // Use database price, not session price
-      $unit_amount = (int) ($product->price * 100);
-
-      // Count deliverable items for shipping calculation
-      if ($product->state->value === 'deliverable') {
-        $totalDeliverableQuantity += $item['quantity'];
-      }
-
       $items[] = [
         'price_data' => [
           'currency' => 'chf',
-          'unit_amount' => $unit_amount,
+          'unit_amount' => (int) (($orderProduct->price / $orderProduct->quantity) * 100),
           'product_data' => [
-            'name' => $product->title,
-            'images' => [env('APP_URL') . "/img/small/" . $product->image],
+            'name' => $orderProduct->title,
+            'images' => [config('app.url') . "/img/small/" . $orderProduct->image],
           ],
         ],
-        'quantity' => $item['quantity'],
+        'quantity' => $orderProduct->quantity,
       ];
     }
 
-    // Add shipping as separate line item if there are deliverable items
-    if ($totalDeliverableQuantity > 0) {
-      $shippingCost = (new CalculateShipping())->execute($totalDeliverableQuantity);
+    // Calculate shipping from order total vs product prices
+    $productTotal = $order->orderProducts->sum('price');
+    $shippingCost = $order->total - $productTotal;
+
+    if ($shippingCost > 0) {
       $items[] = [
         'price_data' => [
           'currency' => 'chf',
@@ -150,7 +137,7 @@ class OrderController extends Controller
       ];
     }
 
-    // Create checkout session id
+    // Create checkout session with order reference
     $checkout_session = \Stripe\Checkout\Session::create([
       'customer_email' => $cart['invoice_address']['email'],
       'submit_type' => 'pay',
@@ -158,35 +145,46 @@ class OrderController extends Controller
       'line_items' => $items,
       'mode' => 'payment',
       'locale' => app()->getLocale(),
-      'success_url' => route('order.payment.success'),
-      'cancel_url' => route('order.payment.cancel'),
+      'success_url' => route('order.payment.success', ['order' => $order->uuid]),
+      'cancel_url' => route('order.payment.cancel', ['order' => $order->uuid]),
+      'metadata' => [
+        'order_uuid' => $order->uuid,
+      ],
     ]);
+
+    // Store the Stripe session ID on the order
+    $order->stripe_session_id = $checkout_session->id;
+    $order->save();
+
+    // Clear the cart now that order is created
+    (new DestroyCart())->execute();
 
     // Redirect to Stripe
     return redirect()->away($checkout_session->url);
   }
 
-  public function paymentSuccess()
+  public function paymentSuccess(Order $order)
   {
-    $cart = (new UpdateCart())->execute([
-      'order_step' => $this->handleStep(6),
-      'is_paid' => true,
-    ]);
-
-    $order = (new HandleOrder())->execute();
+    // The webhook will mark the order as paid and send notifications.
+    // This page just shows a confirmation to the user.
+    // The order might not be marked as paid yet if the webhook hasn't fired.
     return redirect()->route('order.confirmation', $order);
   }
 
-  public function paymentCancel()
+  public function paymentCancel(Order $order)
   {
-    return redirect()->route('order.summary'); 
+    // User cancelled payment - the order exists but is unpaid
+    // We could delete it or leave it for manual review
+    // For now, redirect back to create a new order
+    return redirect()->route('order.overview')
+      ->with('error', 'Die Zahlung wurde abgebrochen. Bitte versuchen Sie es erneut.');
   }
 
   public function confirmation(Order $order)
   {
     return view('pages.order.confirmation', [
       'order' => $order,
-      'order_step' => $this->handleStep(6),
+      'order_step' => 6,
     ]);
   }
 

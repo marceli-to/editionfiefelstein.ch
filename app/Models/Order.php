@@ -30,6 +30,7 @@ class Order extends Model
     'shipping_country',
     'total',
     'payment_method',
+    'stripe_session_id',
     'payed_at',
   ];
 
@@ -99,8 +100,10 @@ class Order extends Model
 
   public function getPaymentInfoAttribute()
   {
-    return 'Kreditkarte / ' . \Carbon\Carbon::parse($this->paid_at)->format('d.m.Y, H:i');
-    //return $this->payment_method . ' / ' . \Carbon\Carbon::parse($this->paid_at)->format('d.m.Y, H:i');
+    if ($this->payed_at) {
+      return 'Kreditkarte / ' . \Carbon\Carbon::parse($this->payed_at)->format('d.m.Y, H:i');
+    }
+    return 'Kreditkarte / Zahlung wird verarbeitet';
   }
 
   /**

@@ -27,6 +27,11 @@ class ImageController extends Controller
      */
     public function show(Request $request, string $path): Response
     {
+        // Prevent path traversal attacks
+        if (str_contains($path, '..') || str_starts_with($path, '/')) {
+            abort(403);
+        }
+
         $cachedPath = $this->server->makeImage($path, $request->all());
         $cache = $this->server->getCache();
         $imageContent = $cache->read($cachedPath);
