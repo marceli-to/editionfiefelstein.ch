@@ -56,6 +56,11 @@ class OrderResource extends Resource
                 ->disabled()
                 ->columnSpan('full'),
 
+              TextInput::make('shipping_cost')
+                ->label('Versandkosten')
+                ->disabled()
+                ->columnSpan('full'),
+
               TextInput::make('payment_method')
                 ->label('Zahlungsmethode')
                 ->disabled()
