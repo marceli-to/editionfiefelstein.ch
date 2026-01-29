@@ -113,7 +113,7 @@ class OrderController extends Controller
           'unit_amount' => (int) (($orderProduct->price / $orderProduct->quantity) * 100),
           'product_data' => [
             'name' => $orderProduct->title,
-            'images' => [config('app.url') . "/img/small/" . $orderProduct->image],
+            'images' => [config('app.url') . "/img/" . $orderProduct->image],
           ],
         ],
         'quantity' => $orderProduct->quantity,
